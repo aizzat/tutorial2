@@ -27,3 +27,10 @@ add_executable(topic_subscriber src/topic_subscriber.cpp)
 add_dependencies(topic_subscriber ${${PROJECT_NAME}_EXPORTED_TARGETS}
 ${catkin_EXPORTED_TARGETS})
 target_link_libraries(topic_subscriber ${catkin_LIBRARIES})
+
+install( TARGETS
+    topic_publisher
+    topic_subscriber
+    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
